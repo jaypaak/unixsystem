@@ -1,0 +1,65 @@
+<html>
+<body>
+  <h1>Chapter 06 : Access file</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h4>File Attributes</h4>
+  <p>
+    Unix is a multi-user system that provides file access permissions to ensure security. File attributes can be checked
+    using the <code>ls -l</code> command. Attributes include file type, permissions, link count, owner, group, size, and
+    last modified time.
+  </p>
+
+  <h4>File Access Permissions</h4>
+  <p>
+    Users are categorized into three groups, each with different permissions:
+  </p>
+  <ul>
+    <li><strong>Owner (u)</strong>: The user who created the file.</li>
+    <li><strong>Group (g)</strong>: Users who belong to the same group as the file.</li>
+    <li><strong>Others (o)</strong>: All other users.</li>
+  </ul>
+  <p>Permissions include:</p>
+  <ul>
+    <li><strong>r</strong>: read</li>
+    <li><strong>w</strong>: write</li>
+    <li><strong>x</strong>: execute</li>
+  </ul>
+
+  <h4>Changing Permissions with Symbols</h4>
+  <p><code>chmod [options] mode filename</code></p>
+  <p>Examples:</p>
+  <ul>
+    <li><code>chmod u-w file.txt</code>: Remove write permission from owner</li>
+    <li><code>chmod g+wx file.txt</code>: Add write and execute to group</li>
+    <li><code>chmod o=rwx file.txt</code>: Set full permissions for others</li>
+  </ul>
+
+  <h4>Changing Permissions with Numbers</h4>
+  <p>
+    Permissions can also be changed using octal numbers:
+  </p>
+  <ul>
+    <li><code>7 = rwx</code></li>
+    <li><code>6 = rw-</code></li>
+    <li><code>5 = r-x</code></li>
+    <li><code>4 = r--</code></li>
+  </ul>
+  <p>Examples:</p>
+  <ul>
+    <li><code>chmod 755 file.txt</code>: Owner rwx, Group and Others r-x</li>
+    <li><code>chmod 700 file.txt</code>: Owner rwx, Group and Others no access</li>
+  </ul>
+
+  <h4>Default File Permissions</h4>
+  <p>
+    When a file or directory is created, default permissions are applied, modified by a <code>umask</code> value.
+  </p>
+  <ul>
+    <li><code>umask</code>: View or set the permission mask</li>
+    <li>Example: <code>umask 022</code> results in default 755 for directories and 644 for files</li>
+  </ul>
+
+</body>
+
+</html>
