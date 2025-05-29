@@ -1,0 +1,82 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 14: Basic of System Management</title>
+</head>
+
+<body>
+  <h1>Chapter 14: Basic of System Management</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h2>1. System Administrator</h2>
+  <ul>
+    <li>Manages system operations and security</li>
+    <li>Account: <strong>root</strong>, home: <code>/root</code></li>
+    <li>Change user: <code>su [-] [username]</code></li>
+  </ul>
+
+  <h2>2. Booting and Shutdown</h2>
+  <ul>
+    <li><strong>shutdown</strong>: Shutdown system<br>
+      Options: <code>-y</code> (no confirm), <code>-g</code> (delay), <code>-i</code> (init level), <code>now</code> (immediate)
+    </li>
+  </ul>
+
+  <h2>3. User Management</h2>
+  <ul>
+    <li><strong>useradd:</strong> Add user account<br>
+      Options: <code>-u</code>, <code>-g</code>, <code>-G</code>, <code>-d</code>, <code>-m</code>, <code>-c</code>
+    </li>
+    <li><strong>usermod:</strong> Modify user info<br>
+      Options: <code>-u</code>, <code>-g</code>, <code>-d</code>, <code>-s</code>, <code>-l</code>, <code>-m</code>, <code>-c</code>
+    </li>
+    <li><strong>userdel:</strong> Delete user account<br>
+      Option: <code>-r</code> (remove home)</li>
+    <li><strong>wall:</strong> Send message to all users</li>
+    <li><strong>/etc/motd:</strong> Login message</li>
+  </ul>
+
+  <h2>4. Group Management</h2>
+  <ul>
+    <li><strong>groupadd:</strong> Add group<br>
+      Options: <code>-g</code> (GID), <code>-o</code>
+    </li>
+    <li><strong>groupmod:</strong> Modify group<br>
+      Options: <code>-g</code>, <code>-o</code>, <code>-n</code>
+    </li>
+    <li><strong>groupdel:</strong> Delete group</li>
+  </ul>
+
+  <h2>5. Root Password Management</h2>
+  <ul>
+    <li>Use complex passwords, change regularly</li>
+    <li>If lost, recover using system tools (e.g. <code>sudo passwd root</code> after reboot)</li>
+  </ul>
+
+  <h2>6. Service Management</h2>
+  <ul>
+    <li><strong>svcs:</strong> View services<br>
+      Options: <code>-a</code>, <code>-p</code>, <code>-l</code>, <code>-x</code>
+    </li>
+    <li><strong>svcadm:</strong> Manage services<br>
+      Subcommands: <code>enable</code>, <code>disable</code>, <code>restart</code>
+    </li>
+  </ul>
+
+  <h2>7. Package Management</h2>
+  <ul>
+    <li><strong>pkg:</strong> Install and manage packages<br>
+      Subcommands: <code>install</code>, <code>list</code>, <code>search</code>
+    </li>
+  </ul>
+
+  <h2>8. Network Management</h2>
+  <ul>
+    <li><strong>ifconfig:</strong> View IP config<br>
+      Options: <code>-a</code>
+    </li>
+    <li><strong>ipadm:</strong> Manage IP addresses</li>
+  </ul>
+
+</body>
+</html>
