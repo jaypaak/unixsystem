@@ -1,0 +1,68 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 13: Bash Shell Programming</title>
+</head>
+
+<body>
+  <h1>Chapter 13: Bash Shell Programming</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h2>1. Shell Script</h2>
+  <ul>
+    <li><strong>Shell Script:</strong> Program interpreted and executed by the shell</li>
+    <li><strong>Components:</strong> Commands, control structures, variables</li>
+    <li><strong>Execution:</strong> <code>./scriptname</code> or <code>bash scriptname</code></li>
+    <li><strong>Structure:</strong>
+      <ul>
+        <li><code>#!</code>: Specify the interpreter (e.g., <code>#!/bin/bash</code>)</li>
+        <li><code>#</code>: Comments</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>2. Variables</h2>
+  <ul>
+    <li><strong>Types:</strong> Shell variables, environment variables</li>
+    <li><strong>Assignment:</strong> <code>var=value</code></li>
+    <li><strong>String Manipulation:</strong> <code>%</code>, <code>#</code> for pattern removal, length</li>
+    <li><strong>Positional Parameters:</strong> <code>$1</code>, <code>$2</code>, etc.</li>
+    <li><strong>Command Substitution:</strong> <code>`command`</code> or <code>$(command)</code></li>
+  </ul>
+
+  <h2>3. Input</h2>
+  <ul>
+    <li><strong>read:</strong> Read input from user</li>
+    <li><strong>here document (<<):</strong> Input until a terminator string</li>
+  </ul>
+
+  <h2>4. Operators</h2>
+  <ul>
+    <li><strong>Types:</strong> Arithmetic, comparison, logical, bitwise</li>
+    <li><strong>Usage:</strong> <code>let</code>, <code>(( ))</code> for arithmetic</li>
+  </ul>
+
+  <h2>5. Control Structures</h2>
+  <ul>
+    <li><strong>Conditional Statements:</strong> <code>if</code>, <code>case</code></li>
+    <li><strong>Loops:</strong> <code>for</code>, <code>while</code>, <code>until</code>, <code>select</code></li>
+    <li><strong>Loop Control:</strong> <code>continue</code>, <code>break</code></li>
+    <li><strong>Test Conditions:</strong> String tests, file tests, numeric tests</li>
+  </ul>
+
+  <h2>6. Functions</h2>
+  <ul>
+    <li><strong>Definition:</strong> <code>function name { commands; }</code></li>
+    <li><strong>Calling Functions:</strong> Just use the function name</li>
+    <li><strong>Return Values:</strong> <code>return [n]</code>, stored in <code>$?</code></li>
+    <li><strong>Delete Function:</strong> <code>unset -f functionname</code></li>
+  </ul>
+
+  <h2>7. Debugging</h2>
+  <ul>
+    <li><strong>bash -x:</strong> Print each command as it runs</li>
+    <li><strong>trap:</strong> Handle signals, monitor variables with <code>DEBUG</code></li>
+  </ul>
+
+</body>
+</html>
