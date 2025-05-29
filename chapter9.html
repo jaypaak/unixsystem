@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>File Archive & Compression Commands</title>
+</head>
+
+<body>
+  <h1>Chapter 09: File Archive & Compression Commands</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h2>1. File Archiving with tar</h2>
+  <p><strong>Archive:</strong> A collection of files grouped into one for storage.</p>
+  <p><strong>tar (tape archive)</strong> - Common options:</p>
+  <ul>
+    <li><code>c</code>: Create archive</li>
+    <li><code>t</code>: List archive contents</li>
+    <li><code>x</code>: Extract archive</li>
+    <li><code>f</code>: Specify archive file</li>
+    <li><code>v</code>: Verbose output</li>
+    <li><code>h</code>: Follow symbolic links</li>
+  </ul>
+
+  <h2>2. Archiving and Compressing with jar</h2>
+  <p><strong>jar (Java Archive Tool)</strong></p>
+  <ul>
+    <li><code>cvf</code>: Create and compress jar archive</li>
+    <li><code>c0vf</code>: Create archive without compression</li>
+    <li><code>tvf</code>: View contents</li>
+    <li><code>xvf</code>: Extract files</li>
+    <li><code>u</code>: Update archive</li>
+    <li><code>i</code>: Create index</li>
+    <li><code>m</code>: Use manifest file</li>
+    <li><code>0</code>: No compression</li>
+  </ul>
+
+  <h2>3. .Z Files: compress/uncompress</h2>
+  <ul>
+    <li><strong>compress:</strong> Creates .Z compressed files</li>
+    <li><code>-f</code>: Force compression</li>
+    <li><code>-c</code>: Output to screen, no file</li>
+    <li><code>-v</code>: Show compression info</li>
+    <li><strong>zcat:</strong> Display contents of .Z files</li>
+    <li><strong>uncompress:</strong> Restore .Z files</li>
+  </ul>
+
+  <h2>4. .gz Files: gzip/gunzip</h2>
+  <ul>
+    <li><strong>gzip:</strong> Compress files into .gz</li>
+    <li><code>-d</code>: Decompress</li>
+    <li><code>-l</code>: List contents</li>
+    <li><code>-r</code>: Recursive compression</li>
+    <li><code>-t</code>: Test archive</li>
+    <li><code>-v</code>: Verbose</li>
+    <li><strong>gzcat:</strong> View .gz file content</li>
+    <li><strong>gunzip:</strong> Decompress .gz files</li>
+  </ul>
+
+  <h2>5. .zip Files: zip/unzip</h2>
+  <ul>
+    <li><strong>zip:</strong> Compress files into .zip</li>
+    <li><code>-v</code>: Verbose output</li>
+    <li><code>-r</code>: Recursive compression</li>
+    <li><code>-u</code>: Update archive with new or changed files</li>
+    <li><strong>unzip:</strong> Extract .zip files</li>
+  </ul>
+
+  <h2>6. .bz2 Files: bzip2/bunzip2</h2>
+  <ul>
+    <li><strong>bzip2:</strong> High compression open source tool</li>
+    <li><code>-d</code>: Decompress</li>
+    <li><code>-l</code>: Show content</li>
+    <li><code>-t</code>: Test file</li>
+    <li><code>-v</code>: Verbose output</li>
+    <li><code>--best</code>: Max compression</li>
+    <li><strong>bzcat:</strong> View contents of .bz2</li>
+    <li><strong>bunzip2:</strong> Decompress .bz2 files</li>
+  </ul>
+</body>
+
+</html>
