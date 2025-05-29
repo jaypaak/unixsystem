@@ -1,0 +1,125 @@
+  <title>Learn How to use VIM</title>
+</head>
+
+<body>
+  <h1>Chapter 02 : Learn How to use VIM</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h4>Mode vs. Non-Mode Type Editors</h4>
+  <ul>
+    <li><strong>Mode Type</strong>
+      <ul>
+        <li>Keys are interpreted as commands in command mode.</li>
+        <li>Keys are interpreted as data in insert mode.</li>
+        <li>Special keys are used to switch between modes.</li>
+      </ul>
+    </li>
+    <li><strong>Non-Mode Type</strong>
+      <ul>
+        <li>All keys are considered input data.</li>
+        <li>Commands are issued using combinations of keys (e.g., Ctrl or Alt).</li>
+        <li>Example: Word processors like Word and Excel.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Vim</strong> is a mode type editor.</p>
+
+  <h4>Vim Architecture</h4>
+  <ul>
+    <li><strong>Buffer</strong>: Temporary storage for editing content during insert mode.</li>
+    <li><strong>Disk</strong>: Where edited content is saved from the buffer.</li>
+  </ul>
+
+  <h4>Entering Insert Mode</h4>
+  <ul>
+    <li><strong>i</strong>: Insert at cursor position</li>
+    <li><strong>a</strong>: Insert after the cursor</li>
+    <li><strong>o</strong>: Add a new line below the current line</li>
+    <li><strong>I</strong>: Insert at the beginning of the current line</li>
+    <li><strong>A</strong>: Insert at the end of the current line</li>
+    <li><strong>O</strong>: Add a new line above the current line</li>
+  </ul>
+
+  <h4>Moving the Cursor</h4>
+  <ul>
+    <li><strong>h</strong>: Move left</li>
+    <li><strong>l</strong>: Move right</li>
+    <li><strong>j</strong>: Move down</li>
+    <li><strong>k</strong>: Move up</li>
+    <li><strong>0 or ^</strong>: Move to the first character of the line</li>
+    <li><strong>$</strong>: Move to the end of the line</li>
+  </ul>
+
+  <h4>Scrolling the Screen</h4>
+  <ul>
+    <li><strong>Ctrl + u</strong>: Scroll up half a page</li>
+    <li><strong>Ctrl + d</strong>: Scroll down half a page</li>
+    <li><strong>Ctrl + b</strong>: Scroll up a full page</li>
+    <li><strong>Ctrl + f</strong>: Scroll down a full page</li>
+    <li><strong>:line_number</strong>: Move to the specified line</li>
+    <li><strong>:0</strong>: Move to the first line</li>
+    <li><strong>:$</strong>: Move to the last line</li>
+  </ul>
+
+  <h4>Saving and Exiting Vim</h4>
+  <ul>
+    <li><strong>:q</strong>: Quit if no changes were made</li>
+    <li><strong>:q!</strong>: Quit without saving changes</li>
+    <li><strong>:w [filename]</strong>: Save changes, optionally to a new file</li>
+    <li><strong>:wq / :wq!</strong>: Save changes and quit</li>
+  </ul>
+
+  <h4>Editing and Deleting</h4>
+  <ul>
+    <li><strong>r</strong>: Replace character under cursor</li>
+    <li><strong>#r[char]</strong>: Replace # characters with given character</li>
+    <li><strong>cw</strong>: Change the current word</li>
+    <li><strong>#cw</strong>: Change # words</li>
+    <li><strong>s</strong>: Replace character(s) starting from cursor</li>
+    <li><strong>#s</strong>: Replace # characters starting from cursor</li>
+    <li><strong>x</strong>: Delete character under cursor</li>
+    <li><strong>dw</strong>: Delete the current word</li>
+    <li><strong>dd</strong>: Delete current line</li>
+    <li><strong>#dd</strong>: Delete # lines starting from current line</li>
+    <li><strong>u</strong>: Undo last action</li>
+    <li><strong>.</strong>: Repeat last action</li>
+  </ul>
+
+  <h4>Copy & Paste</h4>
+  <ul>
+    <li><strong>yy / #yy</strong>: Copy the current line / # lines</li>
+    <li><strong>p</strong>: Paste below current line</li>
+    <li><strong>P</strong>: Paste above current line</li>
+  </ul>
+
+  <h4>Specifying Ranges</h4>
+  <ul>
+    <li><strong>:1,$</strong> or <strong>:%</strong>: From first to last line</li>
+    <li><strong>:10,20</strong>: From line 10 to 20</li>
+    <li><strong>:#y</strong>: Copy line #</li>
+    <li><strong>:range y</strong>: Copy lines within range</li>
+    <li><strong>:#d</strong>: Delete line #</li>
+    <li><strong>:range d</strong>: Delete lines within range</li>
+    <li><strong>:pu</strong>: Paste buffer content after current line</li>
+  </ul>
+
+  <h4>Search and Replace</h4>
+  <ul>
+    <li><strong>/string</strong>: Search downward</li>
+    <li><strong>?string</strong>: Search upward</li>
+    <li><strong>n</strong>: Next match in same direction</li>
+    <li><strong>N</strong>: Next match in reverse direction</li>
+    <li><strong>:range s/old/new/</strong>: Replace first match of 'old' with 'new' in range</li>
+    <li><strong>:range s/old/new/g</strong>: Replace all matches of 'old' with 'new' in range</li>
+    <li><strong>:%s/old/new/g</strong>: Replace all occurrences in the entire file</li>
+  </ul>
+
+  <h4>Other Useful Commands</h4>
+  <ul>
+    <li><strong>:!shell_command</strong>: Run a shell command within Vim</li>
+    <li><strong>:sh</strong>: Open shell temporarily, return with <code>exit</code></li>
+  </ul>
+
+</body>
+
+</html>
