@@ -1,0 +1,96 @@
+<html>
+<head>
+  <title>Search File and Directory</title>
+</head>
+<body>
+  <h1>Chapter 07 : Search File and Directory</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h4>1. Searching File Content: grep / egrep / fgrep</h4>
+  <p>
+    The <code>grep</code> command searches files for lines that match a given pattern.
+    It supports various options and regular expressions.
+  </p>
+  <p>Common options:</p>
+  <ul>
+    <li><code>-i</code>: Ignore case</li>
+    <li><code>-l</code>: Print only file names with matching lines</li>
+    <li><code>-n</code>: Show line numbers</li>
+    <li><code>-v</code>: Invert match (exclude matching lines)</li>
+    <li><code>-c</code>: Count matching lines</li>
+    <li><code>-w</code>: Match whole words</li>
+  </ul>
+
+  <h4>Using grep Examples</h4>
+  <ul>
+    <li><code>grep -i unix grep.dat</code>: Case-insensitive match</li>
+    <li><code>grep -l unix grep.dat</code>: Show file names with matches</li>
+    <li><code>grep -n unix grep.dat</code>: Show line numbers</li>
+    <li><code>grep -v unix grep.dat</code>: Show lines without the pattern</li>
+    <li><code>grep -c 123 grep.dat</code>: Count lines with "123"</li>
+    <li><code>grep -w unix grep.dat</code>: Match the whole word "unix"</li>
+  </ul>
+
+  <h4>Regular Expressions with grep</h4>
+  <p>Useful characters and patterns:</p>
+  <ul>
+    <li><code>^</code>: Start of line (e.g., <code>^root</code>)</li>
+    <li><code>$</code>: End of line (e.g., <code>sh$</code>)</li>
+    <li><code>.</code>: Any single character (e.g., <code>r..t</code>)</li>
+    <li><code>[ ]</code>: Character set (e.g., <code>[Pp]attern</code>)</li>
+    <li><code>[^ ]</code>: Negated set (e.g., <code>[^a-m]att</code>)</li>
+    <li><code>*</code>: Zero or more repetitions (e.g., <code>oo*</code>)</li>
+  </ul>
+
+  <h4>egrep - Extended grep</h4>
+  <p>
+    <code>egrep</code> supports extended regular expressions, including:
+  </p>
+  <ul>
+    <li><code>+</code>: One or more repetitions (e.g., <code>[a-z]+ark</code>)</li>
+    <li><code>?</code>: Zero or one (e.g., <code>unix[0-9]?</code>)</li>
+    <li><code>x|y</code>: Match x or y (e.g., <code>apple|orange</code>)</li>
+    <li><code>( )</code>: Grouping (e.g., <code>search(es|ing)+</code>)</li>
+  </ul>
+
+  <h4>fgrep - Fixed String grep</h4>
+  <p>
+    <code>fgrep</code> searches for fixed strings and does not interpret regular expression characters.
+  </p>
+
+  <h4>2. Searching Files with find</h4>
+  <p>
+    The <code>find</code> command searches for files and directories based on conditions such as name, type,
+    modification time, size, and permissions.
+  </p>
+  <p>Syntax:</p>
+  <p><code>find path condition [action]</code></p>
+  <p>Common conditions:</p>
+  <ul>
+    <li><code>-name</code>: Match file name</li>
+    <li><code>-type</code>: Match file type (e.g., f = file, d = directory)</li>
+    <li><code>-mtime / -atime</code>: Match modification/access time</li>
+    <li><code>-user</code>: Match owner</li>
+    <li><code>-size</code>: Match file size</li>
+    <li><code>-newer</code>: Newer than a reference file</li>
+    <li><code>-perm</code>: Match permissions</li>
+  </ul>
+
+  <p>Common actions:</p>
+  <ul>
+    <li><code>-print</code>: Display file path (default)</li>
+    <li><code>-ls</code>: Long listing of results</li>
+    <li><code>-exec command {} \;</code>: Execute a command on each result</li>
+    <li><code>-ok command {} \;</code>: Like exec but with confirmation</li>
+  </ul>
+
+  <h4>3. Searching Commands with which</h4>
+  <p>
+    The <code>which</code> command locates executables in the user's PATH environment.
+  </p>
+  <p>Example:</p>
+  <ul>
+    <li><code>which ls</code>: Shows the path to <code>ls</code></li>
+  </ul>
+</body>
+</html>
