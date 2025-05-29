@@ -1,0 +1,84 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 10: Internet & Transport Commands</title>
+</head>
+
+<body>
+  <h1>Chapter 10: Internet & Transport Commands</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h2>1. User Communication: write/wall/talk/mesg</h2>
+  <ul>
+    <li><strong>write:</strong> Send messages to a logged-in user<br>
+      Syntax: <code>write user [terminal]</code><br>
+      End message with Ctrl+D
+    </li>
+    <li><strong>wall:</strong> Broadcast a message to all users<br>
+      Syntax: <code>wall [filename]</code><br>
+      Used for urgent messages; general users must be in tty group
+    </li>
+    <li><strong>talk:</strong> Direct conversation with another user<br>
+      Syntax: <code>talk user[@host] [terminal]</code><br>
+      Supports 1:1 conversations locally or with remote hosts
+    </li>
+    <li><strong>mesg:</strong> Control permission for receiving messages<br>
+      Syntax: <code>mesg [y|n]</code><br>
+      'y' allows, 'n' denies messages
+    </li>
+  </ul>
+
+  <h2>2. Sending Emails: mailx</h2>
+  <ul>
+    <li><strong>mailx:</strong> Command-line email tool<br>
+      Syntax: <code>mailx [options] [email]</code><br>
+      <code>-s</code>: Specify subject<br>
+      Internal commands:<br>
+      <ul>
+        <li><code>h</code>: List mail headers</li>
+        <li><code>r</code>: Reply to a message</li>
+        <li><code>d [num]</code>: Delete mail (last read if no num)</li>
+        <li><code>u num</code>: Undelete mail</li>
+        <li><code>s filename</code>: Save mail to file</li>
+        <li><code>q</code>: Quit and save to ~/mbox</li>
+        <li><code>x</code>: Exit without saving</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>3. Host and User Info</h2>
+  <ul>
+    <li><strong>hostname:</strong> Show system hostname</li>
+    <li><strong>nslookup domain:</strong> Query DNS for domain or IP<br>
+      Syntax: <code>nslookup [domain]</code>
+    </li>
+    <li><strong>ping:</strong> Check network connectivity<br>
+      Syntax: <code>ping host</code>
+    </li>
+    <li><strong>finger:</strong> Display user information<br>
+      Syntax: <code>finger [user|user@host|@host]</code>
+    </li>
+  </ul>
+
+  <h2>4. File Transfer: ftp</h2>
+  <ul>
+    <li><strong>ftp:</strong> File Transfer Protocol for uploads/downloads<br>
+      Syntax: <code>ftp host</code><br>
+      Internal commands:<br>
+      <ul>
+        <li><code>cd</code>: Change server directory</li>
+        <li><code>lcd</code>: Change local directory</li>
+        <li><code>ls</code>: List server directory</li>
+        <li><code>ascii/bin</code>: Set transfer mode</li>
+        <li><code>get/mget</code>: Download file(s)</li>
+        <li><code>put/mput</code>: Upload file(s)</li>
+        <li><code>prompt</code>: Toggle prompt for multiple files</li>
+        <li><code>hash</code>: Show progress</li>
+        <li><code>bye</code>: Exit ftp</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+</html>
+
