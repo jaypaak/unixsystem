@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>Handle Directory</title>
+</head>
+<body>
+  <h1>Chapter 02 : Handle Directory</h1>
+  <h3>Author: 19100586 unix101</h3>
+  <ul>
+    <p>Types of Files</p>
+    <li>
+      <h5>Regular Files</h5>
+      <ul>
+        <li>Text (ASCII, vi): source code (c/java), web documents (html)</li>
+        <li>Binary: multimedia, programs, compressed files, encrypted files</li>
+      </ul>
+    </li>
+<li>
+<h5>Special Files</h5>
+      <ul>
+        <li>Directory Files</li>
+        <li>Device Files</li>
+        <li>Pipe Files</li>
+        <li>
+          <ul>
+            <p>Link Files</p>
+            <li>Hard Link: file name is directly connected to data</li>
+            <li>
+              Soft Link (Symbolic): file name is NOT directly connected to data,
+              instead the data block contains the path of the original file (/usr/lib/~)
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h4>Directory Hierarchy</h4>
+  <img width="400" src="https://mblogthumb-phinf.pstatic.net/MjAxOTAyMTNfMTQy/MDAxNTUwMDI5Nzk3NjMw.16JSrXFAJuKFp09_LPOhA8MiD9yH33XOgBKcoiTGT3Ig.FncZ4XNG-pGScfkmB44-zXszaCd-m2bBr-79bMWYNFwg.PNG.jeffms1/image.png?type=w800" alt="UNIX Directory Hierarchy">
+  <ul>
+    <li>Home Directory: ~</li>
+    <li>Parent Directory: ..</li>
+    <li>Current Directory: .</li>
+    <li>Subdirectory: /name</li>
+  </ul>
+
+  <h4>Absolute Path and Relative Path</h4>
+  <p>
+    Absolute Path: The location of a specific file based on the home directory<br>
+    Relative Path: The location of a specific file based on your current position<br>
+    In the image above, if your current location is /usr, the absolute and relative paths to /bin are:<br>
+    Absolute Path: /usr/bin <br>
+    Relative Path: /bin
+  </p>
+
+  <h4>Other Directory-related Commands</h4>
+  <ul>
+    <li>pwd: Displays your current location as an absolute path</li>
+    <li>cd [directory]: Move to [directory]</li>
+    <li>ls [options] [directory]: Displays information about files or directories</li>
+    <li>mkdir [directory]: Creates a directory (error if the directory already exists)</li>
+    <li>rmdir [directory]: Deletes a directory</li>
+  </ul>
+</body>
+</html>
