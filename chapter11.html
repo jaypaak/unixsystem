@@ -1,0 +1,108 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 11: Unix Utility</title>
+</head>
+
+<body>
+  <h1>Chapter 11: Unix Utility</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h2>1. File Information: wc</h2>
+  <ul>
+    <li><strong>wc:</strong> Count lines, words, bytes, or characters<br>
+      Options:
+      <ul>
+        <li><code>-c</code>: Byte count</li>
+        <li><code>-m</code>: Character count</li>
+        <li><code>-l</code>: Line count</li>
+        <li><code>-w</code>: Word count</li>
+      </ul>
+      Syntax: <code>wc [options] filename</code>
+    </li>
+  </ul>
+
+  <h2>2. Sorting Files: sort</h2>
+  <ul>
+    <li><strong>sort:</strong> Sort lines of text files<br>
+      Options:
+      <ul>
+        <li><code>-b</code>: Ignore leading blanks</li>
+        <li><code>-r</code>: Reverse order</li>
+        <li><code>-c</code>: Check if sorted</li>
+        <li><code>-u</code>: Unique lines</li>
+        <li><code>-d</code>: Dictionary order</li>
+        <li><code>-o file</code>: Save result to file</li>
+        <li><code>-t char</code>: Field separator</li>
+        <li><code>-k #,#</code>: Sort by fields</li>
+        <li><code>-n</code>: Numeric sort</li>
+      </ul>
+      Syntax: <code>sort [options] filename</code>
+    </li>
+  </ul>
+
+  <h2>3. Splitting Files: split</h2>
+  <ul>
+    <li><strong>split:</strong> Split large files into smaller parts<br>
+      Options:
+      <ul>
+        <li><code>-b n</code>: Split by n bytes</li>
+        <li><code>-n</code>: Split by n lines</li>
+      </ul>
+      Syntax: <code>split [options] [filename]</code>
+    </li>
+  </ul>
+
+  <h2>4. Removing Duplicates: uniq</h2>
+  <ul>
+    <li><strong>uniq:</strong> Filter out repeated lines<br>
+      Options:
+      <ul>
+        <li><code>-c</code>: Count occurrences</li>
+        <li><code>-d</code>: Show duplicated lines</li>
+        <li><code>-u</code>: Show unique lines</li>
+      </ul>
+      Syntax: <code>uniq [options] [filename]</code>
+    </li>
+  </ul>
+
+  <h2>5. Cutting Fields: cut</h2>
+  <ul>
+    <li><strong>cut:</strong> Extract parts of lines<br>
+      Options:
+      <ul>
+        <li><code>-c list</code>: Select characters</li>
+        <li><code>-f fields</code>: Select fields</li>
+        <li><code>-d char</code>: Field delimiter</li>
+      </ul>
+      Syntax: <code>cut [options] [filename]</code>
+    </li>
+  </ul>
+
+  <h2>6. Pasting Files: paste</h2>
+  <ul>
+    <li><strong>paste:</strong> Merge lines of files<br>
+      Options:
+      <ul>
+        <li><code>-s</code>: Serial (one after another)</li>
+        <li><code>-d char</code>: Field delimiter</li>
+      </ul>
+      Syntax: <code>paste [options] file1 file2</code>
+    </li>
+  </ul>
+
+  <h2>7. File Dump: dd</h2>
+  <ul>
+    <li><strong>dd:</strong> Convert and copy files<br>
+      Options:
+      <ul>
+        <li><code>bs=n</code>: Block size</li>
+        <li><code>conv=lcase</code>: Convert to lowercase</li>
+        <li><code>conv=ucase</code>: Convert to uppercase</li>
+      </ul>
+      Syntax: <code>dd [options] [if=input] [of=output]</code>
+    </li>
+  </ul>
+
+</body>
+</html>
