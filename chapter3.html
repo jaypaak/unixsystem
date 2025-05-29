@@ -1,1 +1,122 @@
+<html>
 
+<head>
+  <title>Handle File</title>
+</head>
+
+<body>
+  <h1>Chapter 03 : Handle File</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <ul>
+    <h4>1. File Viewing Commands</h4>
+    <li>
+      <p>cat [opt] filename</p>
+
+      <pre>
+A command useful for viewing simple (short) files.
+The -n option displays line numbers along with the content.
+      </pre>
+      <img width="300" alt="Image"
+        src="https://github.com/user-attachments/assets/9dbaf60b-2079-4e12-94aa-1cf3f859a554" />
+    </li>
+    <li>
+      <p>tail [opt] filename</p>
+
+      <pre>
+Displays the last part of the file.
+Without options, it shows the last 10 lines by default.
+-n option: shows the last n lines.
+-f option: monitors the file in real-time for changes.
+      </pre>
+      <img width="300" alt="Image"
+        src="https://github.com/user-attachments/assets/c2e25a48-412d-4f50-a7c7-53fe84920594" />
+      <img width="300" alt="Image"
+        src="https://github.com/user-attachments/assets/87c85119-be60-4f2f-90e9-8eb155bf1ec1" />
+    </li>
+  </ul>
+
+  <ul>
+    <h4>2. File Manipulation Commands</h4>
+    <li>
+      <p>cp [opt] original_filename copy_filename</p>
+
+      <pre>
+- cp file1 file2: Copies file1 to file2.
+- cp -r dir1 dir2: Recursively copies dir1 and all contents to dir2.
+      </pre>
+      <img width="300" alt="Image"
+        src="https://github.com/user-attachments/assets/8ae22d67-e99b-4865-8fc2-f51725e1114e" />
+      <img width="300" alt="Image"
+        src="https://github.com/user-attachments/assets/cad313bc-800d-49b5-a838-779ce5a589f3" />
+    </li>
+    <li>
+      <p>rm [opt] filename/dirname</p>
+      <ul>
+        <p>option</p>
+        <li>
+          <p>Prompt before deleting</p>
+
+          <pre>
+-i option prompts before deletion.
+          </pre>
+          <img width="300" alt="Image"
+            src="https://github.com/user-attachments/assets/3883ca73-7998-48b0-8048-fb1b0b12a5af" />
+        </li>
+        <li>
+          <p>Force delete</p>
+
+          <pre>
+Use -f to force delete, especially when the directory contains files.
+          </pre>
+          <img width="300" alt="Image"
+            src="https://github.com/user-attachments/assets/4aebaac3-140a-4a62-9a27-93a09aa9832d" />
+        </li>
+        <li>
+          <p>Delete directory</p>
+
+          <pre>
+Use -r option to remove a directory and its contents.
+          </pre>
+          <img width="300" alt="Image"
+            src="https://github.com/user-attachments/assets/6eed1396-1e04-4295-b492-df5db6512c06" />
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h4>
+    <p>Difference Between ln (link) and cp (copy)</p>
+
+    <pre>
+ln -s/no opt original new_file creates a new file sharing the same inode and content.
+Though it looks similar to cp, the differences are:
+
+cp (copy)
+- Creates a completely separate file.
+- Modifying one does not affect the other.
+- Used for editing separate copies.
+
+ln (link)
+- Shares content under different names.
+- Modifying one affects the other.
+- Used when files need to be managed jointly.
+
+This difference arises because cp creates a new file with a different inode,
+while ln creates a new file pointing to the same inode.
+    </pre>
+  </h4>
+
+  <h4>
+    <p>How to update file timestamp or create an empty new file without modifying it</p>
+
+    <pre>
+touch: If the specified file doesnt exist, it creates it.
+If it exists, it updates its timestamp to the current time or a specified time.
+    </pre>
+    <img width="300" alt="Image"
+      src="https://github.com/user-attachments/assets/97a43654-55f8-49a3-ab2b-54417f5d1398" />
+  </h4>
+</body>
+
+</html>
