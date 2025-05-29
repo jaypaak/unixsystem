@@ -1,0 +1,66 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 12: Understanding of Unix Shell</title>
+</head>
+
+<body>
+  <h1>Chapter 12: Understanding of Unix Shell</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h2>1. Functions and Types of Unix Shell</h2>
+  <ul>
+    <li><strong>Shell:</strong> Provides user interface</li>
+    <li><strong>Functions:</strong>
+      <ul>
+        <li>Command interpreter: Interprets and executes commands</li>
+        <li>Programming features: Supports script-based automation</li>
+        <li>User environment setup: Customizes user settings</li>
+      </ul>
+    </li>
+    <li><strong>Types of Shell:</strong>
+      <ul>
+        <li>Bourne Shell (sh)</li>
+        <li>Korn Shell (ksh)</li>
+        <li>C Shell (csh)</li>
+        <li>Bash (bash)</li>
+        <li>Others: tcsh, dtksh, zsh</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>2. Korn Shell Features</h2>
+  <ul>
+    <li><strong>Path:</strong> /usr/bin/ksh</li>
+    <li><strong>Prompt:</strong> $ (user), # (root)</li>
+    <li><strong>Alias:</strong> Custom commands saved in <code>.kshrc</code></li>
+    <li><strong>History:</strong> Save and recall command history</li>
+    <li><strong>Filename Autocomplete:</strong> Partial name + ESC/TAB</li>
+    <li><strong>Environment Config:</strong>
+      <ul>
+        <li>System: <code>/etc/profile</code></li>
+        <li>User: <code>~/.profile</code>, <code>~/.kshrc</code></li>
+        <li>PATH variable, PS1 prompt setup</li>
+      </ul>
+    </li>
+    <li><strong>Terminal Settings:</strong> <code>stty</code> for key mapping, size, etc.</li>
+  </ul>
+
+  <h2>3. C Shell Features</h2>
+  <ul>
+    <li><strong>Path:</strong> /usr/bin/csh</li>
+    <li><strong>Prompt:</strong> % (user), # (root)</li>
+    <li><strong>Alias:</strong> Use <code>alias</code> and <code>unalias</code></li>
+    <li><strong>History:</strong> Store and recall command history, set size with <code>set history</code></li>
+    <li><strong>File Autocomplete:</strong> Enable with <code>set filec</code></li>
+    <li><strong>Environment Config Files:</strong>
+      <ul>
+        <li>System: <code>/etc/.login</code></li>
+        <li>User: <code>~/.login</code>, <code>~/.cshrc</code>, <code>~/.logout</code></li>
+        <li><code>source filename</code>: Apply changes</li>
+      </ul>
+    </li>
+  </ul>
+
+</body>
+</html>
