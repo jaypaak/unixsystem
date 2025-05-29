@@ -1,0 +1,67 @@
+ <title>Learn Process and Command</title>
+</head>
+
+<body>
+  <h1>Chapter 08: Learn Process and Command</h1>
+  <h3>Author: 19100586 unix101</h3>
+
+  <h2>1. Concepts and Types of Processes</h2>
+  <ul>
+    <li><strong>Process:</strong> A running program.</li>
+    <li><strong>System Process:</strong> Required for Unix operations.</li>
+    <li><strong>User Process:</strong> Processes initiated by users.</li>
+    <li><strong>Daemon:</strong> Background service process managed by the kernel.</li>
+    <li><strong>Parent:</strong> Creates child processes.</li>
+    <li><strong>Child:</strong> Created by a parent, returns result upon termination.</li>
+    <li><strong>Orphan:</strong> Parent process ended before the child.</li>
+    <li><strong>Zombie:</strong> Terminated but still holds system resources.</li>
+  </ul>
+
+  <h2>2. Process Management Commands</h2>
+  <h3>View Process List</h3>
+  <ul>
+    <li><code>ps</code>: Displays process status.</li>
+    <li><code>pgrep</code>: Searches for processes by name.</li>
+  </ul>
+
+  <h3>Terminate Process</h3>
+  <ul>
+    <li><code>kill [signal] PID</code>: Sends a signal to a process.</li>
+    <li><code>pkill [signal] process_name</code>: Sends a signal to a named process.</li>
+  </ul>
+
+  <h3>Signals</h3>
+  <ul>
+    <li><strong>1 (SIGHUP):</strong> Terminal disconnect – terminates process.</li>
+    <li><strong>2 (SIGINT):</strong> Ctrl+C – terminates process.</li>
+    <li><strong>9 (SIGKILL):</strong> Forcefully kills process – cannot be ignored.</li>
+    <li><strong>15 (SIGTERM):</strong> Default terminate signal – can be ignored.</li>
+  </ul>
+
+  <h3>Foreground and Background Process Control</h3>
+  <ul>
+    <li><code>fg</code>: Bring background job to foreground.</li>
+    <li><code>bg</code>: Resume job in background.</li>
+    <li><code>jobs</code>: List background jobs.</li>
+    <li><code>nohup command &</code>: Run command in background after logout.</li>
+  </ul>
+
+  <h3>Process Monitoring Tools</h3>
+  <ul>
+    <li><code>prstat</code>: Real-time process statistics (Solaris).</li>
+    <li><code>top</code>: Displays live system processes and statistics.</li>
+  </ul>
+
+  <h2>3. User Information Commands</h2>
+  <ul>
+    <li><code>users</code>: Displays logged-in users.</li>
+    <li><code>who</code>: Displays who is logged in and related info.</li>
+    <li><code>w</code>: Shows who is logged in and what they are doing.</li>
+    <li><code>who am i</code>: Displays current session user info.</li>
+    <li><code>whoami</code>: Displays current user's login name.</li>
+    <li><code>id</code>: Displays user ID, group ID.</li>
+    <li><code>su</code>: Switch user (default to root if unspecified).</li>
+  </ul>
+</body>
+
+</html>
